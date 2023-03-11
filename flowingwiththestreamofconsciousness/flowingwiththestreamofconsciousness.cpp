@@ -9,44 +9,55 @@
 
 using namespace std;
 
-class game {
-public:
-    game() {
-        sleep;
-        cout << "안녕하십니까." << endl;
-        sleep;
-        cout << "시작하기에 앞서.." << endl;
-        Sleep(800);
-        cout << "간단한 질문을 하겠습니다." << endl;
-        sleep;
-        cout << "..." << endl;
-        sleep;
-        cout << "이름이?.." << endl;
-        sleep;
-        cin >> name;
-        sleep;
-        cout << "....." << endl;
-        sleep;
-        cout << "그는 책장을 넘기곤 말을 이어간다." << endl;
-        sleep;
-        cout << "나이는." << endl;
-        sleep;
-        cin >> age;
-        sleep;
-        cout << "..나이는 딱히 상관 없습니다." << endl;
-        sleep;
-        cout << "그럼.." << endl;
-        
-    };
-private:
-    string name; //받음
-    int age; //받음
-    string whatdoyoulike;
+void gugudan(int a) {
+    for (int i = 1; i < 10; i++) {
+        int hap;
+        hap = a * i;
+        cout << a << " * " << i << " = " << hap << endl;
+    }
+}
 
-};
+void chooseit() {
+    cout << "귀찮앙" << endl;
+    int a;
+    int right;
+    srand(a);
+    cout << "야 나 숫자 정함 맞춰보셈" << endl;
+    cin >> right;
+    while (a == right) {
+        if (a == right) {
+            cout << "우예 알았누" << endl;
+            break;
+        }
+        else {
+            cout << "아니야 ㅋㅋ" << endl;
+            if (a > right) {
+                cout << "작다야" << endl;
+            }
+            else if (a < right) {
+                cout << "크다야" << endl;
+            }
+        }
+    }
+    
+}
+
+void swap() {
+    int x = 1;
+    int y = 3;
+    cout << x << y << endl;
+    swap(x, y);
+    cout << x << y << endl;
+}
 
 int main()
 {
-    game gm;
+    int g;
+    cout << "몇 단?" << endl;
+    cin >> g;
+    gugudan(g);
+    swap();
+
+
 }
 
