@@ -2,25 +2,24 @@
 #include <vector>
 
 using namespace std;
-//int n;
-//int k;
-//
-//int solve(int oo, int xx, int y) {
-//	if (oo > n || y >= k) {
-//		return 0;
-//	}
-//	if (oo == n && xx == n) {
-//		return 1;
-//	}
-//	if (chk[oo][xx][y] == 1) {
-//		return memo[oo][xx][y];
-//		chk[oo][xx][y] = 1;
-//		return memo[oo][xx][y] = solve(oo + 1, xx + 1, y + 1) + solve(oo + 2, xx + 1, y + 1)
-//			+ solve(oo + 1, xx + 2, y + 1) + solve(oo + 2, xx + 2, y + 1);
-//	}
-//}
+int n, door1, door2, m;
+int arr[21];
+int answer = 9999;
+void solve(int d1, int d2, int dis, int cnt) {
+	if (m == cnt) {
+		answer = min(answer, dis);
+		return;
+	}
+	solve(arr[cnt], d2, arr[cnt] - d1, cnt + 1);
+	solve(d1, arr[cnt], arr[cnt] - d2, cnt + 1);
+}
 
 
 int main() {
-	
+	cin >> n;
+	cin >> door1 >> door2;
+	cin >> m;
+	for (int i = 0; i < mm; i++) {
+		cin >> arr[1];
+	}
 }
