@@ -21,5 +21,6 @@ int main() {
 	cin >> m;
 	for (int i = 0; i < mm; i++) {
 		cin >> arr[1];
+		//wotdafuc
 	}
 }
