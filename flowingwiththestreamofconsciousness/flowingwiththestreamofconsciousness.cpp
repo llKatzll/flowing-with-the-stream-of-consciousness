@@ -15,15 +15,14 @@ using namespace std;
 //}
 //
 
-void satanwilldie() {
-	cout << "갓 뎀 할렐루야!" << endl;
-	cout << "천!!!!사가 왔습니다!!" << endl;
-	cout << "천사가 왔습니다!!" << endl;
-	cout << "세이탄!!" << endl;
-	cout << "세이탄 윌 다이!!" << endl;
+void anotherprac() {
+	int n;
+	cin >> n;
+	for (int i = 0; i < n/2; i++) {
 
+	}
 }
 
 int main() {
-	satanwilldie();
+	anotherprac();
 }
