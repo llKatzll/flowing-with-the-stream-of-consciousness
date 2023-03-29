@@ -33,6 +33,7 @@ private:
 	double anythingelse = 0;
 	double po[5] = {0,0,0,0,0};
 	double s = 0;
+	//
 };
 
 
