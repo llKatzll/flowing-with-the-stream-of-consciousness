@@ -26,6 +26,18 @@ void ez() {
 	}
 }
 
+void test2() {
+	string r;
+	cin >> r;
+	vector<char>a;
+	a.resize(r.length());
+	for (int i = 0; i < r.length(); i++) {
+		a[i] = r[i];
+	}
+}
+
+void 
+
 
 
 int main() {
