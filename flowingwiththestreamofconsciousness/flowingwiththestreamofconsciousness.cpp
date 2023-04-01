@@ -36,12 +36,102 @@ void test2() {
 	}
 }
 
-void 
+void vectorExcercize() {
+	vector<int> a;
+	a.resize(5);
 
+	for (int i = 0; i < 5; i++) {
+		a[i] = i;
+	}
 
+	vector<vector<int>> b;
+	b.resize(5);
+	for (int i = 0; i < 5; i++) {
+		b[i].resize(5);
+	}
 
-int main() {
-	test();
-	ez();
+	vector<vector<vector<int>>> c;
+	c.resize(5);
+	for (int i = 0; i < 5; i++) {
+		c[i].resize(5);
+		for (int x = 0; x < 5; x++) {
+			c[x].resize(5);
+		}
+	}
+}	
+
+// 빼기 1 하고 출력하기 => 0 될때까지
+void recursive(int a) {
+	a = a - 1;
+	if (a <= 0) {
+		return;
+	}
+	else {
+		recursive(a);
+		cout << a << endl;
+	}
 }
 
+
+void fibonacci(int num1, int num2) {
+	if (num1 < 100) {
+		cout << "( " << num1 << " " << num2 << " )" << "  = " << " " << num2 << endl;
+		int hold;
+		hold = num1;
+		num1 = num2;
+		num2 = hold + num2;
+		fibonacci(num1, num2);
+	}
+	else { return; }
+}
+
+int digit(long a) {
+	a = a / 10;
+	if (a <= 0) {
+		return 1;
+	}
+	else {
+		int count = 0;
+		count = 1 + digit(a);
+		return count;
+	}
+}
+
+// 5! => 5*4*3*2*1=120	
+int gimme(int a) {
+	a = a * a - 1;
+	if (a <= 0) {
+		return a;
+	}
+	else {
+		a--;
+	}
+}
+
+// 25 -> 2+5=7
+// 2345 -> 2+3+4+5=14
+int digitAdd(int a) {
+
+}
+
+// 소수 계산기 
+// 리턴값 True: 소수이다 , False: 소수 아니다
+bool prime(int a) {
+
+}
+
+int main() {
+	cout << gimme(1) << endl;		// 1
+	cout << gimme(2) << endl;		// 2
+	cout << gimme(3) << endl;		// 6
+	cout << gimme(4) << endl;		// 24
+	cout << gimme(5) << endl;		// 120
+	cout << gimme(10) << endl;		// 3628800
+
+	cout << endl;
+
+	//cout << digitAdd(1) << endl; // 1
+	//cout << digitAdd(25) << endl; // 7
+	//cout << digitAdd(123456) << endl; // 21
+}
+// 0 1 1 2 3 5 8 13
