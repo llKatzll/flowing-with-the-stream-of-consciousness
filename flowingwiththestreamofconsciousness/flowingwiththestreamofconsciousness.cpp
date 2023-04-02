@@ -60,30 +60,13 @@ void vectorExcercize() {
 	}
 }	
 
-// 빼기 1 하고 출력하기 => 0 될때까지
-void recursive(int a) {
-	a = a - 1;
-	if (a <= 0) {
-		return;
-	}
-	else {
-		recursive(a);
-		cout << a << endl;
-	}
-}
-
-
-void fibonacci(int num1, int num2) {
-	if (num1 < 100) {
-		cout << "( " << num1 << " " << num2 << " )" << "  = " << " " << num2 << endl;
-		int hold;
-		hold = num1;
-		num1 = num2;
-		num2 = hold + num2;
-		fibonacci(num1, num2);
-	}
-	else { return; }
-}
+//// 빼기 1 하고 출력하기 => 0 될때까지
+//void recursive(int a) {
+//	a = a - 1;
+//	if (a <= 0) {
+//		return;
+//	}
+//
 
 int digit(long a) {
 	a = a / 10;
@@ -97,28 +80,29 @@ int digit(long a) {
 	}
 }
 
-// 5! => 5*4*3*2*1=120	
+ //5! => 5*4*3*2*1=120	
 int gimme(int a) {
-	a = a * a - 1;
-	if (a <= 0) {
-		return a;
+	if (a <= 1) {
+		return 1;
 	}
 	else {
-		a--;
+		return a * gimme(a - 1);
 	}
 }
 
-// 25 -> 2+5=7
-// 2345 -> 2+3+4+5=14
-int digitAdd(int a) {
 
-}
 
-// 소수 계산기 
-// 리턴값 True: 소수이다 , False: 소수 아니다
-bool prime(int a) {
-
-}
+//// 25 -> 2+5=7
+//// 2345 -> 2+3+4+5=14
+//int digitAdd(int a) {
+//
+//}
+//
+//// 소수 계산기 
+//// 리턴값 True: 소수이다 , False: 소수 아니다
+//bool prime(int a) {
+//
+//}
 
 int main() {
 	cout << gimme(1) << endl;		// 1
