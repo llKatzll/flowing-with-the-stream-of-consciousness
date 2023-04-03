@@ -92,17 +92,20 @@ int gimme(int a) {
 
 
 
-//// 25 -> 2+5=7
-//// 2345 -> 2+3+4+5=14
-//int digitAdd(int a) {
-//
-//}
-//
-//// 소수 계산기 
-//// 리턴값 True: 소수이다 , False: 소수 아니다
-//bool prime(int a) {
-//
-//}
+int digitAdd(int a) {
+	if (a < 10) {
+		return a;
+	}
+	else {
+		return digitAdd(a / 10) + a % 10;
+	}
+}
+
+// 소수 계산기 
+// 리턴값 True: 소수이다 , False: 소수 아니다
+bool prime(int a) {
+
+}
 
 int main() {
 	cout << gimme(1) << endl;		// 1
@@ -111,6 +114,7 @@ int main() {
 	cout << gimme(4) << endl;		// 24
 	cout << gimme(5) << endl;		// 120
 	cout << gimme(10) << endl;		// 3628800
+	cout << digitAdd(235) << endl;
 
 	cout << endl;
 
