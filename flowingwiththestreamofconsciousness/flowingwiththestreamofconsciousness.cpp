@@ -1,7 +1,23 @@
 ﻿#include <iostream>
 #include <vector>
+#include <Windows.h>
 
 using namespace std;
+
+//class test {
+//public:
+//	test() {
+//		cout << "뭡니까" << endl;
+//	}
+//	void aririhe() {
+//		cout << "암거나 말해봐" << endl;
+//		cin >> arihee;
+//		cout << "나가" << endl;
+//	}
+//private:
+//	int arihe;
+//	string arihee;
+//};
 
 void test() {
 	int n, x;
@@ -101,11 +117,11 @@ int digitAdd(int a) {
 	}
 }
 
-// 소수 계산기 
-// 리턴값 True: 소수이다 , False: 소수 아니다
-bool prime(int a) {
-
-}
+//// 소수 계산기 
+//// 리턴값 True: 소수이다 , False: 소수 아니다
+//bool prime(int a) {
+//
+//}
 
 int main() {
 	cout << gimme(1) << endl;		// 1
@@ -115,6 +131,8 @@ int main() {
 	cout << gimme(5) << endl;		// 120
 	cout << gimme(10) << endl;		// 3628800
 	cout << digitAdd(235) << endl;
+	//test obj;
+	//obj.aririhe();
 
 	cout << endl;
 
