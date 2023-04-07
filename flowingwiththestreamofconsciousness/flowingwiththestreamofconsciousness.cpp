@@ -82,7 +82,7 @@ void vectorExcercize() {
 //	if (a <= 0) {
 //		return;
 //	}
-//
+// no
 
 int digit(long a) {
 	a = a / 10;
