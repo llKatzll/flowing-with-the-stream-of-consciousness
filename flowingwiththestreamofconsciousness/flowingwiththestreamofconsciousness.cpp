@@ -117,27 +117,82 @@ int digitAdd(int a) {
 	}
 }
 
-//// 소수 계산기 
-//// 리턴값 True: 소수이다 , False: 소수 아니다
-//bool prime(int a) {
-//
-//}
+
+// horse파워
+// 바퀴
+// 좌석
+// 문
+// 
+class vehicle {
+public:
+	vehicle(int _horsepower, int _wheels, int _doors, int _seats) {
+		horsepower = _horsepower;
+		wheels = _wheels;
+		doors = _doors;
+		seats = _seats;
+	};
+	vehicle(int _wheels, int _doors, int _seats) {
+		wheels = _wheels;
+		doors = _doors;
+		seats = _seats;
+	}
+	~vehicle() {
+		cout << "I am 소멸자" << endl;
+	};
+
+
+	void okgetin() {
+		seats--;
+		if (seats >= 200) {
+			cout << "GTFOmyBUSbich" << endl;
+			seats = 200;
+		}
+	}
+
+	void GTFOmyBUSbich() {
+		seats++;
+		if (seats <= 0) {
+			seats = 0;
+		}
+	}
+
+	void printSeat() {
+		cout << "No of seats: " << seats << endl;
+	}
+
+	void go() {
+		speed++;
+		cout << "speed:" << speed << endl;
+	}
+	void stop() {
+		speed--;
+		cout << "speed:" << speed << endl;
+	}
+protected:
+	int horsepower;
+	int wheels;
+	int doors;
+	int seats;
+	float speed = 0;
+private:
+};
+
+
+/*
+낮선 사람 
+엄마
+나
+public: 낮선 사람, 엄마 나 다 사용 가능
+protected: 엄마, 나만 사용 가능
+private: 다나만 사용 가능
+*/
+
 
 int main() {
-	cout << gimme(1) << endl;		// 1
-	cout << gimme(2) << endl;		// 2
-	cout << gimme(3) << endl;		// 6
-	cout << gimme(4) << endl;		// 24
-	cout << gimme(5) << endl;		// 120
-	cout << gimme(10) << endl;		// 3628800
-	cout << digitAdd(235) << endl;
-	//test obj;
-	//obj.aririhe();
 
-	cout << endl;
+	if (true) {
+		vehicle arihe(400, 20, 10, 200);
+		cout << "arihe 바로 다음" << endl;
+	}
 
-	//cout << digitAdd(1) << endl; // 1
-	//cout << digitAdd(25) << endl; // 7
-	//cout << digitAdd(123456) << endl; // 21
 }
-// 0 1 1 2 3 5 8 13
