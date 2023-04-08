@@ -187,12 +187,44 @@ protected: 엄마, 나만 사용 가능
 private: 다나만 사용 가능
 */
 
+string numberOnly(string a) {
+	// string 배열처럼 사용 가능
+	// string a = "A0C"
+	// char b = 'A'
+	// a[0] == b -> true
+	// char c = '0'
+	// a[1] == c -> true
+
+
+	// A1B2C3
+	// 출력: 123
+	// 힌트
+	// string a = "123"
+	// a = a + '0';
+	// a -> "1230"
+
+	int count = 0;
+	for (int i = 0; i < a.length(); i++) {
+		
+	}
+}
+
+void swap(int* a, int* b) {
+
+};
 
 int main() {
+	cout << "1번" << endl;
+	cout << numberOnly("A1B2C3") << endl;
+	cout << numberOnly("q234k24k7l") << endl;
 
-	if (true) {
-		vehicle arihe(400, 20, 10, 200);
-		cout << "arihe 바로 다음" << endl;
-	}
+	cout << "2번" << endl;
+	int a = 10;
+	int b = 20;
+	cout << "스왑 전: A: " << a << " B: " << b << endl;
+	swap(&a, &b);
+	cout << "스왑 후: A: " << a << " B: " << b << endl;
+
+	cout << ""
 
 }
