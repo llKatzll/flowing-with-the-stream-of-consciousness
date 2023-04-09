@@ -187,31 +187,23 @@ protected: 엄마, 나만 사용 가능
 private: 다나만 사용 가능
 */
 
-string numberOnly(string a) {
-	// string 배열처럼 사용 가능
-	// string a = "A0C"
-	// char b = 'A'
-	// a[0] == b -> true
-	// char c = '0'
-	// a[1] == c -> true
+string numberOnly(string a) { // 고냥 void 말고 string 해도 되겟징
+	string arihe;
 
-
-	// A1B2C3
-	// 출력: 123
-	// 힌트
-	// string a = "123"
-	// a = a + '0';
-	// a -> "1230"
-
-	int count = 0;
 	for (int i = 0; i < a.length(); i++) {
-		
+		if (isdigit(a[i])) {
+			arihe += a[i];
+		}
 	}
+	//
+	return arihe;
 }
 
 void swap(int* a, int* b) {
-
-};
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+}
 
 int main() {
 	cout << "1번" << endl;
@@ -224,7 +216,4 @@ int main() {
 	cout << "스왑 전: A: " << a << " B: " << b << endl;
 	swap(&a, &b);
 	cout << "스왑 후: A: " << a << " B: " << b << endl;
-
-	cout << ""
-
 }
