@@ -205,6 +205,10 @@ void swap(int* a, int* b) {
 	*b = temp;
 }
 
+void namesearch(string name) {
+
+}
+
 int main() {
 	cout << "1번" << endl;
 	cout << numberOnly("A1B2C3") << endl;
@@ -216,4 +220,6 @@ int main() {
 	cout << "스왑 전: A: " << a << " B: " << b << endl;
 	swap(&a, &b);
 	cout << "스왑 후: A: " << a << " B: " << b << endl;
+
+	
 }
