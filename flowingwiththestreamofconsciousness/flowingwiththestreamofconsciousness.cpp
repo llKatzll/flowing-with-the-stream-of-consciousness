@@ -206,7 +206,7 @@ void swap(int* a, int* b) {
 }
 
 void namesearch(string name) {
-
+//ddd
 }
 
 int main() {
