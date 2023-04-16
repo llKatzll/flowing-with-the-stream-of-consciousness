@@ -123,69 +123,69 @@ int digitAdd(int a) {
 // 좌석
 // 문
 // 
-class vehicle {
-public:
-	vehicle(int _horsepower, int _wheels, int _doors, int _seats) {
-		horsepower = _horsepower;
-		wheels = _wheels;
-		doors = _doors;
-		seats = _seats;
-	};
-	vehicle(int _wheels, int _doors, int _seats) {
-		wheels = _wheels;
-		doors = _doors;
-		seats = _seats;
-	}
-	~vehicle() {
-		cout << "I am 소멸자" << endl;
-	};
-
-
-	void okgetin() {
-		seats--;
-		if (seats >= 200) {
-			cout << "GTFOmyBUSbich" << endl;
-			seats = 200;
-		}
-	}
-
-	void GTFOmyBUSbich() {
-		seats++;
-		if (seats <= 0) {
-			seats = 0;
-		}
-	}
-
-	void printSeat() {
-		cout << "No of seats: " << seats << endl;
-	}
-
-	void go() {
-		speed++;
-		cout << "speed:" << speed << endl;
-	}
-	void stop() {
-		speed--;
-		cout << "speed:" << speed << endl;
-	}
-protected:
-	int horsepower;
-	int wheels;
-	int doors;
-	int seats;
-	float speed = 0;
-private:
-};
-
-
-/*
-낮선 사람 sdf
-엄마
-나
-public: 낮선 사람, 엄마 나 다 사용 가능
-protected: 엄마, 나만 사용 가능
-private: 다나만 사용 가능
-*/
+//class vehicle {
+//public:
+//	vehicle(int _horsepower, int _wheels, int _doors, int _seats) {
+//		horsepower = _horsepower;
+//		wheels = _wheels;
+//		doors = _doors;
+//		seats = _seats;
+//	};
+//	vehicle(int _wheels, int _doors, int _seats) {
+//		wheels = _wheels;
+//		doors = _doors;
+//		seats = _seats;
+//	}
+//	~vehicle() {
+//		cout << "I am 소멸자" << endl;
+//	};
+//
+//
+//	void okgetin() {
+//		seats--;
+//		if (seats >= 200) {
+//			cout << "GTFOmyBUSbich" << endl;
+//			seats = 200;
+//		}
+//	}
+//
+//	void GTFOmyBUSbich() {
+//		seats++;
+//		if (seats <= 0) {
+//			seats = 0;
+//		}
+//	}
+//
+//	void printSeat() {
+//		cout << "No of seats: " << seats << endl;
+//	}
+//
+//	void go() {
+//		speed++;
+//		cout << "speed:" << speed << endl;
+//	}
+//	void stop() {
+//		speed--;
+//		cout << "speed:" << speed << endl;
+//	}
+//protected:
+//	int horsepower;
+//	int wheels;
+//	int doors;
+//	int seats;
+//	float speed = 0;
+//private:
+//};
+//
+//
+///*
+//낮선 사람 sdf
+//엄마
+//나
+//public: 낮선 사람, 엄마 나 다 사용 가능
+//protected: 엄마, 나만 사용 가능
+//private: 다나만 사용 가능
+//*/
 
 string numberOnly(string a) { // 고냥 void 말고 string 해도 되겟징
 	string arihe;
@@ -209,17 +209,57 @@ void namesearch(string name) {
 //ddddsfd
 }
 
-int main() {
-	cout << "1번" << endl;
-	cout << numberOnly("A1B2C3") << endl;
-	cout << numberOnly("q234k24k7l") << endl;
+// vector<int> a;
+// 크기 변경 a.resize(10);
+// 배열처럼 사용 가능 a[3] = 15;
+// 끝에 하나 추가 a.push_back(15);
+// 끝에 하나 제거 a.pop_back();
 
-	cout << "2번" << endl;
-	int a = 10;
-	int b = 20;
-	cout << "스왑 전: A: " << a << " B: " << b << endl;
-	swap(&a, &b);
-	cout << "스왑 후: A: " << a << " B: " << b << endl;
+void arihe() {
+	int num;
+	cin >> num;
 
-	
+	//for (int i = 0; i < num; i++) {
+	//	for (int j = 0; j < i; j++) {
+	//		cout << " " << endl;
+	//	}
+	//	for (int j = 0; j < (num - i) - 1; j++) {
+	//		cout << "`*" << endl;
+	//		
+	//	}
+	//	cout << endl;
+	//}
+
+	for (int i = 0; i < num; i = i + 2) {
+		for (int p = num; p > (num - i); p -= 2) {
+			cout << " ";
+		}
+		for (int j = 0; j < (num - i); j++) {
+			if (j % 2 == 0) {
+				cout << "*";
+			}
+			else {
+				cout << "`";
+			}
+		}
+		cout << endl;
+		
+	}
 }
+vector<int> nums;
+
+int main() {
+	arihe();
+}
+ 
+//10		10
+//20		10 20
+//30		10 20 30
+//10		10 20 30 10
+//0		10 20 30
+//40		10 20 30 40
+//0		10 20 30
+//0		10 20
+//50		10 20 50
+
+
