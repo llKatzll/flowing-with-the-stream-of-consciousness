@@ -182,7 +182,7 @@ int digitAdd(int a) {
 //낮선 사람 sdf
 //엄마
 //나
-//public: 낮선 사람, 엄마 나 다 사용 가능
+//public: 낮선 사람, 엄마 나 다 사용 가능sdf
 //protected: 엄마, 나만 사용 가능
 //private: 다나만 사용 가능
 //*/
