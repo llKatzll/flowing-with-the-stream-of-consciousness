@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include <vector>
 #include <Windows.h>
+#include <cstdlib>
 
 using namespace std;
 
@@ -182,7 +183,7 @@ int digitAdd(int a) {
 //낮선 사람 sdf
 //엄마
 //나
-//public: 낮선 사람, 엄마 나 다 사용 가능sdfddddsdf
+//public: 낮선 사람, 엄마 나 다 사용 가능
 //protected: 엄마, 나만 사용 가능
 //private: 다나만 사용 가능
 //*/
@@ -199,17 +200,72 @@ string numberOnly(string a) { // 고냥 void 말고 string 해도 되겟징
 	return arihe;
 }
 
+
+// int a,b,c,d;
+
 void swap(int* a, int* b) {
 	int temp = *a;
 	*a = *b;
 	*b = temp;
 }
 
+void gudegugiuk() {
+	int a = 1;
+	int b = 2;
+
+	int* holda = &a;
+	int* holdb = &b;
+
+	int c;
+	c = *holda;
+	*holda = *holdb;
+	*holdb = c;
+
+	cout << a << " " << b << endl; // a = 2 b = 1 출력되야함
+	//주소값을 이용하여 스왑
+}
+
 void namesearch(string name) {
 //ddddsfd
 }
 
+
+
 void ABBC() {
+	//srand(99);
+	//for (int x = 0; x < 10; x++) {
+	//	cout << rand() % 90 << endl;
+	//}
+
+
+	int number[9][9];
+	srand(time(0));
+	for (int i = 0; i < 9; i++) {
+		for (int p = 0; p < 9; p++) {
+			number[i][p] = rand() % 90;
+			cout << number[i][p] << " ";
+		}
+	}
+
+	int arihe = 0;
+	int x = 0;
+	int y = 0;
+	for (int o = 0; o < 9; o++) {
+		for (int l = 0; l < 9; l++) {
+			if (arihe < number[o][l]) {
+				arihe = number[o][l];
+				x = o + 1;
+				y = l + 1;
+			}
+			else {
+
+			}
+		}
+	}
+
+	cout << "가장 큰 수 : " << arihe << endl;
+	cout << arihe << endl;
+	cout << "(" << x << " , " << y << ") " <<  "번째에 위치함" << endl;
 
 }
 
@@ -252,8 +308,44 @@ void arihe() {
 }
 vector<int> nums;
 
+/*
+ A: ABCDEF
+ B: DE -> return true
+ B: DEFG -> return false
+
+ string 배열처럼 사용 가능
+string a = "ABC";
+a[1] -> B
+ string.length() 크키
+*/
+
+
+bool search(string A, string B) {
+	int count = 0;
+	for (int i = 0; i < B.length(); i++) {
+		for (int i = o; o < A.length(); o++) {
+			
+		}
+			if (A[i] != B[i]) {
+				count = 0;
+			}
+			if (A[i] == B[i]) {
+				count++;
+			}
+			if (count == B.length()) {
+				return true;
+				break;
+			}
+		}
+	if (count != B.length()) {
+		return false;
+	}
+}
+
 int main() {
-	arihe();
+	cout << search("ABABC", "ABC") << endl; // 1
+	cout << search("ABACBABAB", "ABABC") << endl; // 0
+	cout << search("ABC", "ABCDEFG") << endl; // 0, 오루 나면 안됨
 }
  
 //10		10joi
