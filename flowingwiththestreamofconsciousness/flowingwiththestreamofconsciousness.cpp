@@ -320,33 +320,113 @@ a[1] -> B
 */
 
 
-bool search(string A, string B) {
-	int count = 0;
-	for (int i = 0; i < B.length(); i++) {
-		for (int i = o; o < A.length(); o++) {
+//bool search(string A, string B) {
+//	int count = 0;
+//	for (int i = 0; i < B.length(); i++) {
+//		for (int i = o; o < A.length(); o++) {
 			
-		}
-			if (A[i] != B[i]) {
-				count = 0;
-			}
-			if (A[i] == B[i]) {
-				count++;
-			}
-			if (count == B.length()) {
-				return true;
-				break;
-			}
-		}
-	if (count != B.length()) {
-		return false;
-	}
-}
+//		}
+//			if (A[i] != B[i]) {
+//				count = 0;
+//			}
+//			if (A[i] == B[i]) {
+//				count++;
+//			}
+//			if (count == B.length()) {
+//				return true;
+//				break;
+//			}
+//		}
+//	if (count != B.length()) {
+//		return false;
+//	}
+//}
+//int main() {
+//	cout << search("ABABC", "ABC") << endl; // 1
+//	cout << search("ABACBABAB", "ABABC") << endl; // 0
+//	cout << search("ABC", "ABCDEFG") << endl; // 0, 오루 나면 안됨
+//}
+
+class stack {
+public:
+	void push(int number) {
+		arihe[num] = number;
+		num++;
+	};
+	int pop() {
+		num--;
+		return arihe[num];
+	};
+
+private:
+	int arihe[100];
+	int num = 0;
+};
+
+class queue {
+public:
+	void push(int number) {
+		arihe[top] = number;
+		top++;
+	};
+	int pop() {
+		bottom++;
+		return arihe[bottom - 1];
+	};
+private:
+	int arihe[100];
+	int top = 0;
+	int bottom = 0;
+};
+
+struct node {
+	int num;
+	node* next;
+	node* prev;
+};
+
+
+
 
 int main() {
-	cout << search("ABABC", "ABC") << endl; // 1
-	cout << search("ABACBABAB", "ABABC") << endl; // 0
-	cout << search("ABC", "ABCDEFG") << endl; // 0, 오루 나면 안됨
+	node* A = new node;	// 10, B, C
+	node* B = new node;	// 20, C, A
+	node* C = new node;	// 30, A, B
+
+	/*struct node AA;*/
+	A->next = B;
+	A->prev = C;
+	A->num = 10;
+	B->next = C;
+	B->prev = A;
+	B->num = 20;
+	C->next = A;
+	C->prev = B;
+	C->num = 30;
+
+
+	stack S;
+	// 숫자 10개 넣고
+	for (int x = 0; x < 10; x++) {
+
+	}
+
+	// 숫자 1 2 3 4 ... 10 출력되도록 만들기
+	for (int x = 0; x < 10; x++) {
+
+	}
+
 }
+
+
+/*
+Linked list
+-> 언제 사용하는지
+new 무엇인지
+구체적으로 설명
+*/
+
+
  
 //10		10joi
 //20		10 20
